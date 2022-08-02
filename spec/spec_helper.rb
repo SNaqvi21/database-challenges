@@ -12,6 +12,14 @@
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+# file: spec/spec_helper.rb
+
+require 'database_connection'
+
+# Make sure this connects to your test database
+# (its name should end with '_test')
+DatabaseConnection.connect('music_library_test')
+
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
