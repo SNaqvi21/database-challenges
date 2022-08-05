@@ -1,4 +1,5 @@
 require 'database_connection'
+
 DatabaseConnection.connect('book_store_test')
 # class DatabaseConnection
 #   # This method connects to PostgreSQL using the 
