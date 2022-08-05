@@ -1,11 +1,10 @@
 require_relative 'lib/database_connection'
-require_relative 'lib/artist_repository'
 
 # We need to give the database name to the method `connect`.
-DatabaseConnection.connect('music_library')
+DatabaseConnection.connect('book_store')
 
-artist_repository = ArtistRepository.new
+result = DatabaseConnection.exec_params('SELECT * FROM books;', [])
 
-artist_repository.all.each do |artist|
-  p artist
+result.each do |book|
+  p book
 end
